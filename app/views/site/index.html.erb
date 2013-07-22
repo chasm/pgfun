@@ -1,0 +1,8 @@
+<% @users.each do |user| %>
+<p>
+  Name: <%= user.name %><br>
+  Email: <%= user.email %><br>
+  Phones: <%= user.phone_numbers.map {|p| p.digits}.join(", ") %><br>
+  Addresses: <%= user.street_addresses.map {|a| a.street}.join(", ") %>
+</p>
+<% end %>
